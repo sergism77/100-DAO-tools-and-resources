@@ -1,0 +1,675 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>100 DAO tools and resources</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="dd9be12a-cc30-452d-b06f-3e97fb5120ae" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">⚙️</span></div><h1 class="page-title">100 DAO tools and resources</h1></header><div class="page-body"><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesTitle"><path d="M7.73943662,8.6971831 C7.77640845,8.7834507 7.81338028,8.8943662 7.81338028,9.00528169 C7.81338028,9.49823944 7.40669014,9.89260563 6.91373239,9.89260563 C6.53169014,9.89260563 6.19894366,9.64612676 6.08802817,9.30105634 L5.75528169,8.33978873 L2.05809859,8.33978873 L1.72535211,9.30105634 C1.61443662,9.64612676 1.2693662,9.89260563 0.887323944,9.89260563 C0.394366197,9.89260563 0,9.49823944 0,9.00528169 C0,8.8943662 0.0246478873,8.7834507 0.0616197183,8.6971831 L2.46478873,2.48591549 C2.68661972,1.90669014 3.24119718,1.5 3.90669014,1.5 C4.55985915,1.5 5.12676056,1.90669014 5.34859155,2.48591549 L7.73943662,8.6971831 Z M2.60035211,6.82394366 L5.21302817,6.82394366 L3.90669014,3.10211268 L2.60035211,6.82394366 Z M11.3996479,3.70598592 C12.7552817,3.70598592 14,4.24823944 14,5.96126761 L14,9.07922535 C14,9.52288732 13.6549296,9.89260563 13.2112676,9.89260563 C12.8169014,9.89260563 12.471831,9.59683099 12.4225352,9.19014085 C12.028169,9.6584507 11.3257042,9.95422535 10.5492958,9.95422535 C9.60035211,9.95422535 8.47887324,9.31338028 8.47887324,7.98239437 C8.47887324,6.58978873 9.60035211,6.08450704 10.5492958,6.08450704 C11.3380282,6.08450704 12.040493,6.33098592 12.4348592,6.81161972 L12.4348592,5.98591549 C12.4348592,5.38204225 11.9172535,4.98767606 11.1285211,4.98767606 C10.6602113,4.98767606 10.2411972,5.11091549 9.80985915,5.38204225 C9.72359155,5.43133803 9.61267606,5.46830986 9.50176056,5.46830986 C9.18133803,5.46830986 8.91021127,5.1971831 8.91021127,4.86443662 C8.91021127,4.64260563 9.0334507,4.44542254 9.19366197,4.34683099 C9.87147887,3.90316901 10.6232394,3.70598592 11.3996479,3.70598592 Z M11.1778169,8.8943662 C11.6830986,8.8943662 12.1760563,8.72183099 12.4348592,8.37676056 L12.4348592,7.63732394 C12.1760563,7.29225352 11.6830986,7.11971831 11.1778169,7.11971831 C10.5616197,7.11971831 10.056338,7.45246479 10.056338,8.0193662 C10.056338,8.57394366 10.5616197,8.8943662 11.1778169,8.8943662 Z M0.65625,11.125 L13.34375,11.125 C13.7061869,11.125 14,11.4188131 14,11.78125 C14,12.1436869 13.7061869,12.4375 13.34375,12.4375 L0.65625,12.4375 C0.293813133,12.4375 4.43857149e-17,12.1436869 0,11.78125 C-4.43857149e-17,11.4188131 0.293813133,11.125 0.65625,11.125 Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesText"><path d="M7,4.56818 C7,4.29204 6.77614,4.06818 6.5,4.06818 L0.5,4.06818 C0.223858,4.06818 0,4.29204 0,4.56818 L0,5.61364 C0,5.88978 0.223858,6.11364 0.5,6.11364 L6.5,6.11364 C6.77614,6.11364 7,5.88978 7,5.61364 L7,4.56818 Z M0.5,1 C0.223858,1 0,1.223858 0,1.5 L0,2.54545 C0,2.8216 0.223858,3.04545 0.5,3.04545 L12.5,3.04545 C12.7761,3.04545 13,2.8216 13,2.54545 L13,1.5 C13,1.223858 12.7761,1 12.5,1 L0.5,1 Z M0,8.68182 C0,8.95796 0.223858,9.18182 0.5,9.18182 L11.5,9.18182 C11.7761,9.18182 12,8.95796 12,8.68182 L12,7.63636 C12,7.36022 11.7761,7.13636 11.5,7.13636 L0.5,7.13636 C0.223858,7.13636 0,7.36022 0,7.63636 L0,8.68182 Z M0,11.75 C0,12.0261 0.223858,12.25 0.5,12.25 L9.5,12.25 C9.77614,12.25 10,12.0261 10,11.75 L10,10.70455 C10,10.4284 9.77614,10.20455 9.5,10.20455 L0.5,10.20455 C0.223858,10.20455 0,10.4284 0,10.70455 L0,11.75 Z"></path></svg></span>About</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesMultipleSelect"><path d="M4,3 C4,2.447715 4.447715,2 5,2 L12,2 C12.5523,2 13,2.447716 13,3 C13,3.55228 12.5523,4 12,4 L5,4 C4.447715,4 4,3.55228 4,3 Z M4,7 C4,6.447715 4.447715,6 5,6 L12,6 C12.5523,6 13,6.447716 13,7 C13,7.55228 12.5523,8 12,8 L5,8 C4.447715,8 4,7.55228 4,7 Z M4,11 C4,10.447715 4.447715,10 5,10 L12,10 C12.5523,10 13,10.447716 13,11 C13,11.55228 12.5523,12 12,12 L5,12 C4.447715,12 4,11.55228 4,11 Z M2,4 C1.44771525,4 1,3.55228475 1,3 C1,2.44771525 1.44771525,2 2,2 C2.55228475,2 3,2.44771525 3,3 C3,3.55228475 2.55228475,4 2,4 Z M2,8 C1.44771525,8 1,7.55228475 1,7 C1,6.44771525 1.44771525,6 2,6 C2.55228475,6 3,6.44771525 3,7 C3,7.55228475 2.55228475,8 2,8 Z M2,12 C1.44771525,12 1,11.5522847 1,11 C1,10.4477153 1.44771525,10 2,10 C2.55228475,10 3,10.4477153 3,11 C3,11.5522847 2.55228475,12 2,12 Z"></path></svg></span>Tags</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M3.73333,3.86667 L7.46667,3.86667 C8.49613,3.86667 9.33333,4.70387 9.33333,5.73333 C9.33333,6.7628 8.49613,7.6 7.46667,7.6 L6.53333,7.6 C6.01813,7.6 5.6,8.0186 5.6,8.53333 C5.6,9.04807 6.01813,9.46667 6.53333,9.46667 L7.46667,9.46667 C9.5284,9.46667 11.2,7.79507 11.2,5.73333 C11.2,3.6716 9.5284,2 7.46667,2 L3.73333,2 C1.6716,2 0,3.6716 0,5.73333 C0,7.124 0.762067,8.33453 1.88953,8.97713 C1.87553,8.83107 1.86667,8.6836 1.86667,8.53333 C1.86667,7.92013 1.98753,7.33447 2.2036,6.7978 C1.99267,6.4954 1.86667,6.12953 1.86667,5.73333 C1.86667,4.70387 2.70387,3.86667 3.73333,3.86667 Z M12.1095,5.28907 C12.1231,5.4356 12.1333,5.58307 12.1333,5.73333 C12.1333,6.34607 12.0101,6.9294 11.7931,7.46513 C12.0059,7.768 12.1333,8.13573 12.1333,8.53333 C12.1333,9.5628 11.2961,10.4 10.2667,10.4 L6.53333,10.4 C5.50387,10.4 4.66667,9.5628 4.66667,8.53333 C4.66667,7.50387 5.50387,6.66667 6.53333,6.66667 L7.46667,6.66667 C7.98187,6.66667 8.4,6.24807 8.4,5.73333 C8.4,5.2186 7.98187,4.8 7.46667,4.8 L6.53333,4.8 C4.4716,4.8 2.8,6.4716 2.8,8.53333 C2.8,10.59507 4.4716,12.2667 6.53333,12.2667 L10.2667,12.2667 C12.3284,12.2667 14,10.59507 14,8.53333 C14,7.14267 13.2375,5.93167 12.1095,5.28907 Z"></path></svg></span>Website</th><th><span class="icon property-icon"><svg viewBox="0 0 14 14" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0;-webkit-backface-visibility:hidden" class="typesUrl"><path d="M3.73333,3.86667 L7.46667,3.86667 C8.49613,3.86667 9.33333,4.70387 9.33333,5.73333 C9.33333,6.7628 8.49613,7.6 7.46667,7.6 L6.53333,7.6 C6.01813,7.6 5.6,8.0186 5.6,8.53333 C5.6,9.04807 6.01813,9.46667 6.53333,9.46667 L7.46667,9.46667 C9.5284,9.46667 11.2,7.79507 11.2,5.73333 C11.2,3.6716 9.5284,2 7.46667,2 L3.73333,2 C1.6716,2 0,3.6716 0,5.73333 C0,7.124 0.762067,8.33453 1.88953,8.97713 C1.87553,8.83107 1.86667,8.6836 1.86667,8.53333 C1.86667,7.92013 1.98753,7.33447 2.2036,6.7978 C1.99267,6.4954 1.86667,6.12953 1.86667,5.73333 C1.86667,4.70387 2.70387,3.86667 3.73333,3.86667 Z M12.1095,5.28907 C12.1231,5.4356 12.1333,5.58307 12.1333,5.73333 C12.1333,6.34607 12.0101,6.9294 11.7931,7.46513 C12.0059,7.768 12.1333,8.13573 12.1333,8.53333 C12.1333,9.5628 11.2961,10.4 10.2667,10.4 L6.53333,10.4 C5.50387,10.4 4.66667,9.5628 4.66667,8.53333 C4.66667,7.50387 5.50387,6.66667 6.53333,6.66667 L7.46667,6.66667 C7.98187,6.66667 8.4,6.24807 8.4,5.73333 C8.4,5.2186 7.98187,4.8 7.46667,4.8 L6.53333,4.8 C4.4716,4.8 2.8,6.4716 2.8,8.53333 C2.8,10.59507 4.4716,12.2667 6.53333,12.2667 L10.2667,12.2667 C12.3284,12.2667 14,10.59507 14,8.53333 C14,7.14267 13.2375,5.93167 12.1095,5.28907 Z"></path></svg></span>Twitter</th></tr></thead><tbody><tr id="8c03a008-c1c5-40d5-aff8-74ab9c7e7d03"><td class="cell-title"><a href="https://www.notion.so/Aragon-8c03a008c1c540d5aff874ab9c7e7d03">Aragon</a></td><td class="cell-CUXK">Aragon is a suite of applications and services that enable new forms of global communities.
+Communities can organize around capital assets, currency, or tokens, which will increase in value as more people hold and use that asset to participate in the community.
+By providing the tools for people to turn a community, cause, or even a meme into its own economy, we can unlock a long-tail of DAOs that are not limited just to protocols like Ethereum or Bitcoin.
+Aragon not only provides basic financial tools like tokenization but can create reproducible and broadly applicable templates for defining the boundaries of a community and flowing value to contributors over the internet without traditional intermediaries.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://aragon.org/" class="url-value">https://aragon.org/</a></td><td class="cell-ctYf"><a href="https://twitter.com/aragonproject?lang=es" class="url-value">https://twitter.com/aragonproject?lang=es</a></td></tr><tr id="7d3f9f8b-6c26-4804-990f-dc0170c18b81"><td class="cell-title"><a href="https://www.notion.so/Astro-7d3f9f8b6c264804990fdc0170c18b81">Astro</a></td><td class="cell-CUXK">Astro is a no-code DAO creation platform. Astro allows DAO members to create &amp; vote on proposals, set bounties, and manage a treasury. Astro sets up the DAO on the NEAR blockchain, which has interoperability and bridges to other L1 blockchains.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://astrodao.com/" class="url-value">https://astrodao.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/AstroDao" class="url-value">https://twitter.com/AstroDao</a></td></tr><tr id="609c0495-f58e-4f9b-9095-50314e987b96"><td class="cell-title"><a href="https://www.notion.so/bip-609c0495f58e4f9b909550314e987b96">bip</a></td><td class="cell-CUXK">Bip is a community workspace with Git-editable documents and deep integrations with modern community spaces, such as Discord and Slack. Bip features include bots to export insightful community conversations, contributor leaderboards, permissions management, and social-driven discovery of new projects.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://bip.so/" class="url-value">https://bip.so/</a></td><td class="cell-ctYf"><a href="https://twitter.com/bip_so" class="url-value">https://twitter.com/bip_so</a></td></tr><tr id="fb49ba0e-66f1-4392-9c2d-b7992c2a8cb0"><td class="cell-title"><a href="https://www.notion.so/Boardroom-fb49ba0e66f143929c2db7992c2a8cb0">Boardroom</a></td><td class="cell-CUXK">Boardroom is a governance &amp; data portal for its integrated, mainly DeFi protocol DAOs. It offers a dashboard allowing easier participation, ideation workstreams, and real-time treasury &amp; governance data; and an explorer for the integrated DAOs.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://www.boardroom.info/" class="url-value">https://www.boardroom.info/</a></td><td class="cell-ctYf"><a href="https://twitter.com/boardroom_info" class="url-value">https://twitter.com/boardroom_info</a></td></tr><tr id="29db49f4-1466-4ee2-b22e-a4e7004b5f18"><td class="cell-title"><a href="https://www.notion.so/BrightID-29db49f414664ee2b22ea4e7004b5f18">BrightID</a></td><td class="cell-CUXK">DAO-governed, Bright ID is a social-graph identity network that pledges to store no personal data. It applies peer evaluatation to identify trusted prospective members as unique users of BrightID uesr dapps.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://www.brightid.org/" class="url-value">https://www.brightid.org/</a></td><td class="cell-ctYf"><a href="https://twitter.com/BrightIDProject" class="url-value">https://twitter.com/BrightIDProject</a></td></tr><tr id="ee80f47e-f66c-4afa-84eb-d07c3b6e2900"><td class="cell-title"><a href="https://www.notion.so/Build-a-Funding-DAO-on-Polygon-ee80f47ef66c4afa84ebd07c3b6e2900">Build a Funding DAO on Polygon</a></td><td class="cell-CUXK">In this tutorial, we will learn how to create a Decentralized Autonomous Organization, or &quot;DAO&quot; with a Solidity smart contract deployed on Polygon and a NextJS front-end to interact with the DAO.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://learn.figment.io/tutorials/funding-dao-polygon" class="url-value">https://learn.figment.io/tutorials/funding-dao-polygon</a></td><td class="cell-ctYf"></td></tr><tr id="703ee177-a4cf-4ccf-b635-45dfe2554a3d"><td class="cell-title"><a href="https://www.notion.so/Building-and-Running-a-DAO-Why-Governance-Matters-703ee177a4cf4ccfb63545dfe2554a3d">Building and Running a DAO: Why Governance Matters</a></td><td class="cell-CUXK">A practical guide for DAOs&#x27; main functions, needs, and governance areas. Author: Tarun Chitra.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://future.a16z.com/building-and-running-a-dao-why-governance-matters/" class="url-value">https://future.a16z.com/building-and-running-a-dao-why-governance-matters/</a></td><td class="cell-ctYf"></td></tr><tr id="f3ecc67a-6412-4cc7-a7d7-c21e2b755a33"><td class="cell-title"><a href="https://www.notion.so/buildspace-f3ecc67a64124cc7a7d7c21e2b755a33">buildspace</a></td><td class="cell-CUXK">Learn and start building cool stuff, earn NFTs and access secret work opportunities in crypto. Among other projects, you can Build your own DAO with just Javascript in a weekend.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://buildspace.so/" class="url-value">https://buildspace.so/</a></td><td class="cell-ctYf"><a href="https://twitter.com/_buildspace" class="url-value">https://twitter.com/_buildspace</a></td></tr><tr id="b4fa6b6e-21d1-4763-80bc-5430dd394f2f"><td class="cell-title"><a href="https://www.notion.so/Ceramic-b4fa6b6e21d1476380bc5430dd394f2f">Ceramic</a></td><td class="cell-CUXK">Ceramic is a decentralized network to hash-store, access, manage and interact between mutable data streams over IPFS, including custom revrtieval functions, Web3 identificatoin integrations and app-building.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://ceramic.network/" class="url-value">https://ceramic.network/</a></td><td class="cell-ctYf"><a href="https://twitter.com/ceramicnetwork" class="url-value">https://twitter.com/ceramicnetwork</a></td></tr><tr id="e1d99fe1-ba94-40cf-964e-63f3710f5c3f"><td class="cell-title"><a href="https://www.notion.so/Clarity-e1d99fe1ba9440cf964e63f3710f5c3f">Clarity</a></td><td class="cell-CUXK">Clarity is a knowledge management platform that mashes up features of Notion, Discord, and Slack, without all the clutter.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://www.clarity.so/" class="url-value">https://www.clarity.so/</a></td><td class="cell-ctYf"><a href="https://twitter.com/clarityteams" class="url-value">https://twitter.com/clarityteams</a></td></tr><tr id="639d57f0-6608-4087-9cee-4a211f65d4ab"><td class="cell-title"><a href="https://www.notion.so/Coinshift-639d57f0660840879cee4a211f65d4ab">Coinshift</a></td><td class="cell-CUXK">Coinshift simplifies treasury management by providing efficient multisig tooling to save time &amp; money for crypto organisations.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://coinshift.xyz/" class="url-value">https://coinshift.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/0xCoinshift" class="url-value">https://twitter.com/0xCoinshift</a></td></tr><tr id="9fcea29c-aa2d-4205-af9f-7dbd8e762b63"><td class="cell-title"><a href="https://www.notion.so/Coinvise-9fcea29caa2d4205af9f7dbd8e762b63">Coinvise</a></td><td class="cell-CUXK">Powerful tools for creators to build &amp; operate a DAO. Creators use Coinvise for minting a token, retroactive airdrops, crowdfunding &amp; creating incentives for their community.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://www.coinvise.co/" class="url-value">https://www.coinvise.co/</a></td><td class="cell-ctYf"><a href="https://twitter.com/CoinviseCo" class="url-value">https://twitter.com/CoinviseCo</a></td></tr><tr id="9196dccb-d61b-46a7-aa24-8685426da621"><td class="cell-title"><a href="https://www.notion.so/Collab-land-9196dccbd61b46a7aa248685426da621">Collab.land</a></td><td class="cell-CUXK">Collab.Land leverages the power of identity through crypto currency to create a social space unique to a specific network of humans.
+Once you add the bot to your Telegram group or Discord guild, they will manage your people for you. Depending on their token holdings they will be allowed to join the community. If they sell, the bot boots them.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://collab.land/" class="url-value">https://collab.land/</a></td><td class="cell-ctYf"><a href="https://twitter.com/Collab_Land_" class="url-value">https://twitter.com/Collab_Land_</a></td></tr><tr id="534f07b5-f224-4911-96a5-3f8e4560e573"><td class="cell-title"><a href="https://www.notion.so/Colony-534f07b5f224491196a53f8e4560e573">Colony</a></td><td class="cell-CUXK">The Colony platform offers a free suite of tools to launch and run DAOs - Colonies, which make up Colony as a DAO-of-DAOs. Served capabilities include native DAO setting &amp; launching, token issuing &amp; selling, and flexible structure, attention &amp; treasury management tools.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://colony.io/" class="url-value">https://colony.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/joincolony" class="url-value">https://twitter.com/joincolony</a></td></tr><tr id="f0438bee-1010-4816-a569-2b57546ce82b"><td class="cell-title"><a href="https://www.notion.so/Commonwealth-f0438bee10104816a5692b57546ce82b">Commonwealth</a></td><td class="cell-CUXK">Commonwealth serves management tools and 1-stop integration platform for on-chain discussion, propsal-making &amp; voting products, including identity services and native crowdfunding.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Discussion</span><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://commonwealth.im/" class="url-value">https://commonwealth.im/</a></td><td class="cell-ctYf"><a href="https://twitter.com/hicommonwealth" class="url-value">https://twitter.com/hicommonwealth</a></td></tr><tr id="afc2ad54-d850-494f-ba42-7cbad93d3fd4"><td class="cell-title"><a href="https://www.notion.so/Compound-Governor-afc2ad54d850494fba427cbad93d3fd4">Compound Governor</a></td><td class="cell-CUXK">The Compound protocol is a DeFi pioneer in both financial producting and governance. Its simple-enough governance flow is used by some main(ly DeFi) DAOs. It includes user-set voting bars, voting delegation, execution delay, and an emergency function.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://compound.finance/docs/governance" class="url-value">https://compound.finance/docs/governance</a></td><td class="cell-ctYf"><a href="https://twitter.com/compoundfinance" class="url-value">https://twitter.com/compoundfinance</a></td></tr><tr id="b9d1f118-03a6-440f-ad9e-42ccab69f32b"><td class="cell-title"><a href="https://www.notion.so/Coordinape-b9d1f11803a6440fad9e42ccab69f32b">Coordinape</a></td><td class="cell-CUXK">Coordinape facilitates rewards to community members based on the recognition from their peers. Each member has a set amount of allocation points, and can allocate points to the contributors they have worked with based on what they think of their contributions.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Identity</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://coordinape.com/" class="url-value">https://coordinape.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/coordinape" class="url-value">https://twitter.com/coordinape</a></td></tr><tr id="b69a2229-d8c7-4533-b3d0-34ae95014b75"><td class="cell-title"><a href="https://www.notion.so/DAO-Haus-Moloch-b69a2229d8c74533b3d034ae95014b75">DAO Haus (Moloch)</a></td><td class="cell-CUXK">DAOHause is Moloch DAOs&#x27; factory. Manufactured DAOs bear a set of minimaly viable functions, including ragequit, delegation and emergency. DAOHause is governed by holders of the HAUS token - moloch DAOs, their members and contributors.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://daohaus.club/" class="url-value">https://daohaus.club/</a></td><td class="cell-ctYf"><a href="https://twitter.com/nowdaoit" class="url-value">https://twitter.com/nowdaoit</a></td></tr><tr id="0efe9814-5c78-4730-b636-dc3f20735b3a"><td class="cell-title"><a href="https://www.notion.so/DAO-Masters-0efe98145c784730b636dc3f20735b3a">DAO Masters</a></td><td class="cell-CUXK">Explore the tools to launch, manage, and grow a DAO.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://www.daomasters.xyz/" class="url-value">https://www.daomasters.xyz/</a></td><td class="cell-ctYf"></td></tr><tr id="ebf0a2dd-4447-4f78-ad36-0ed6bd965dfd"><td class="cell-title"><a href="https://www.notion.so/DAO-a-Decentralized-governance-layer-for-the-Internet-of-Value-ebf0a2dd44474f78ad360ed6bd965dfd">DAO: a Decentralized governance layer for the Internet of Value</a></td><td class="cell-CUXK">A clear, elaborated introduction to core DAO concepts, ecosystem, praxis, and more. Authors: George Samman, David Freuden.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://static1.squarespace.com/static/564100e0e4b08c9445a5fc5d/t/5ec61d6241af4a208ba87f52/1590041969238/DAO+-+A+Decentralized+Governance+Layer+for+the+Internet+of+Value-1.pdf" class="url-value">https://static1.squarespace.com/static/564100e0e4b08c9445a5fc5d/t/5ec61d6241af4a208ba87f52/1590041969238/DAO+-+A+Decentralized+Governance+Layer+for+the+Internet+of+Value-1.pdf</a></td><td class="cell-ctYf"></td></tr><tr id="2fe92455-fda5-459b-8499-97ec81f66bff"><td class="cell-title"><a href="https://www.notion.so/DAOStack-2fe92455fda5459b849997ec81f66bff">DAOStack</a></td><td class="cell-CUXK">DAOstack has built software for creating, managing, and communicating between DAOs, including collective attention management, governance sandbox, UI and methods library. While it still serves, its development is currently idle.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://daostack.io/" class="url-value">https://daostack.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/daostack" class="url-value">https://twitter.com/daostack</a></td></tr><tr id="658887f2-98e6-4dc8-a6cf-cb9d18b616e5"><td class="cell-title"><a href="https://www.notion.so/Decentralized-autonomous-organizations-DAOs-658887f298e64dc8a6cfcb9d18b616e5">Decentralized autonomous organizations (DAOs)</a></td><td class="cell-CUXK">The official Ethereum Foundation intro-take on DAOs, with further useful links.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://ethereum.org/en/dao/#what-are-daos" class="url-value">https://ethereum.org/en/dao/#what-are-daos</a></td><td class="cell-ctYf"></td></tr><tr id="946e99f6-4ddc-48e5-973a-8820cdd0ef8e"><td class="cell-title"><a href="https://www.notion.so/DeepDAO-946e99f64ddc48e5973a8820cdd0ef8e">DeepDAO</a></td><td class="cell-CUXK">DeepDAO collects and organizes a variety of quantitative and qualitative data about DAOs governance, their structure, people and decision-making. It currently serves interactive data dashboards, project descriptions, a DAO Tools go-to and a governerds&#x27; discord channel.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Analytics</span><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://deepdao.io/" class="url-value">https://deepdao.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/DeepDAO_io" class="url-value">https://twitter.com/DeepDAO_io</a></td></tr><tr id="b305cacd-7e1b-4c98-8ab1-25e5aa9172c2"><td class="cell-title"><a href="https://www.notion.so/DGOV-Foundation-b305cacd7e1b4c988ab125e5aa9172c2">DGOV Foundation</a></td><td class="cell-CUXK">DGOV connects people to discover practices, implement technical solutions and create complex, scalable governance systems that create cohesion and allow people to flourish.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://dgov.foundation/" class="url-value">https://dgov.foundation/</a></td><td class="cell-ctYf"><a href="https://twitter.com/dgovearth" class="url-value">https://twitter.com/dgovearth</a></td></tr><tr id="b917962c-9807-4a0c-b122-27a5d1207624"><td class="cell-title"><a href="https://www.notion.so/Discord-b917962c98074a0cb12227a5d1207624">Discord</a></td><td class="cell-CUXK">Discord offers a platform of multi-thread, media-rich content. It is widely used by DAOs for varied group and private communications, including as official part of decision-making.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Discussion</span><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://discord.com/" class="url-value">https://discord.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/discord" class="url-value">https://twitter.com/discord</a></td></tr><tr id="f55ce3ce-e7d6-47d8-b78d-cb661e5d00ae"><td class="cell-title"><a href="https://www.notion.so/Discourse-f55ce3cee7d647d8b78dcb661e5d00ae">Discourse</a></td><td class="cell-CUXK">Discourse is a free, integrative platform for community discussions and signaling. Its 5-level trust system rewards participation with permissions. It is widely used by DAOs to deliberate, draft governance proposals, signal opinion and manage community attention.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Discussion</span><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://www.discourse.org/" class="url-value">https://www.discourse.org/</a></td><td class="cell-ctYf"><a href="https://twitter.com/discourse" class="url-value">https://twitter.com/discourse</a></td></tr><tr id="53f0ae1d-0bd5-458f-aadb-54a88c4857f6"><td class="cell-title"><a href="https://www.notion.so/disperse-53f0ae1d0bd5458faadb54a88c4857f6">disperse</a></td><td class="cell-CUXK">disperse is a simple and elegant solution to help DAOs batch payments or airdrops.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://disperse.app/" class="url-value">https://disperse.app/</a></td><td class="cell-ctYf"></td></tr><tr id="25b90421-39eb-4834-863a-889072f73f4f"><td class="cell-title"><a href="https://www.notion.so/Dune-Analytics-25b9042139eb4834863a889072f73f4f">Dune Analytics</a></td><td class="cell-CUXK">Dune Analytics is a powerful tool for blockchain research. Dune gives you all the tools to query, extract, and visualize vast amounts of data from the blockchain. Dune is unlocking the power of public blockchain data by making it accessible to everyone.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Analytics</span></td><td class="cell-;yc["><a href="https://dune.xyz/browse/dashboards" class="url-value">https://dune.xyz/browse/dashboards</a></td><td class="cell-ctYf"><a href="https://twitter.com/DuneAnalytics" class="url-value">https://twitter.com/DuneAnalytics</a></td></tr><tr id="2f774cf8-8b01-4728-9358-b06ceabe892d"><td class="cell-title"><a href="https://www.notion.so/ENS-Domains-2f774cf88b0147289358b06ceabe892d">ENS Domains</a></td><td class="cell-CUXK">The Ethereum Name Service(ENS) has been a fundamental building block of the web3 space. An ethereum iteration of DNS, it allows users to shorten their wallet addresses to customizable, digestible names of their choice. So instead of sending funds to a long traditional ethereum address, funds can be sent to yourname.eth.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Identity</span><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://ens.domains/" class="url-value">https://ens.domains/</a></td><td class="cell-ctYf"><a href="https://twitter.com/ensdomains" class="url-value">https://twitter.com/ensdomains</a></td></tr><tr id="4d7150c0-a8de-4091-89db-210109cabf5a"><td class="cell-title"><a href="https://www.notion.so/Enzyme-4d7150c0a8de409189db210109cabf5a">Enzyme</a></td><td class="cell-CUXK">Enzyme is a council-led DAO controlling the Enzyme protocol for assets management, that is based on ready-made and user-strategized investment vaults. It offers DAOs a set of flexible capabilities to run their treasuries, currently leaning towards high-risk DeFi.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://enzyme.finance/" class="url-value">https://enzyme.finance/</a></td><td class="cell-ctYf"><a href="https://twitter.com/enzymefinance" class="url-value">https://twitter.com/enzymefinance</a></td></tr><tr id="dcfdd0b2-f632-48be-a7b6-156591700c31"><td class="cell-title"><a href="https://www.notion.so/EPNS-dcfdd0b2f63248bea7b6156591700c31">EPNS</a></td><td class="cell-CUXK">Ethereum Push Notification Service (EPNS) is a decentralized notification (communication) protocol that enables any dApps or smart contracts to send blockchain agnostic, incentivized and dynamic notifications</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://epns.io/" class="url-value">https://epns.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/epnsproject" class="url-value">https://twitter.com/epnsproject</a></td></tr><tr id="a97033a1-4b01-4dc9-b220-f758f796e705"><td class="cell-title"><a href="https://www.notion.so/Everest-a97033a14b014dc9b220f758f796e705">Everest</a></td><td class="cell-CUXK">Everest DAO is an innovation-driven project focused on tackling new and exciting products that range from DeFi, DAOs, NFTs, and more.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://everestdao.net/" class="url-value">https://everestdao.net/</a></td><td class="cell-ctYf"><a href="https://twitter.com/EverestDAO" class="url-value">https://twitter.com/EverestDAO</a></td></tr><tr id="052b0f68-ccc1-4cc1-80b1-a9205fa220d4"><td class="cell-title"><a href="https://www.notion.so/Fairmint-052b0f68ccc14cc180b1a9205fa220d4">Fairmint</a></td><td class="cell-CUXK">Fairmint provides your company with a full-featured stakeholder backend to run and manage a Rolling SAFE offering. Fairmint’s rolling agreement for future equity is an innovation on the classic SAFE created by Y Combinator 10 years ago. SAFE stands for Simple Agreement for Future Equity and is an agreement between an investor and a company that provides the investor with rights to future equity in the company without determining a specific price per share at the time of the initial investment. The Rolling SAFE is similar but allows for investment in a company at any time, with an implied valuation that grows automatically as more funds are raised. As of September 2021, Fairmint has raised $5.8M on a rolling basis (representing 32% equity) since September, 2020 using their own product.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://www.fairmint.co/" class="url-value">https://www.fairmint.co/</a></td><td class="cell-ctYf"><a href="https://twitter.com/fairmintCO" class="url-value">https://twitter.com/fairmintCO</a></td></tr><tr id="020f3480-052e-420d-8b29-4408165cb2b3"><td class="cell-title"><a href="https://www.notion.so/Gardens-020f3480052e420d8b294408165cb2b3">Gardens</a></td><td class="cell-CUXK">Gardens is a launcher, management, discussion &amp; documentation pack for DAOs, called Gardens. Gardens&#x27; governance is rooted in a coded constitution, conviction voting, consensus-building, and official dispute resolution.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://gardens.1hive.org/#/home" class="url-value">https://gardens.1hive.org/#/home</a></td><td class="cell-ctYf"><a href="https://twitter.com/gardensdao" class="url-value">https://twitter.com/gardensdao</a></td></tr><tr id="b1b7a6e4-d892-49e2-b2a7-a2875028e6a1"><td class="cell-title"><a href="https://www.notion.so/GitBook-b1b7a6e4d89249e2b2a7a2875028e6a1">GitBook</a></td><td class="cell-CUXK">GitBook helps you publish beautiful docs for your users and centralize your teams&#x27; knowledge for advanced collaboration.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://www.gitbook.com/" class="url-value">https://www.gitbook.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/gitbookio" class="url-value">https://twitter.com/gitbookio</a></td></tr><tr id="a6b24cb9-edd0-4810-b582-721be1bfd279"><td class="cell-title"><a href="https://www.notion.so/Gitcoin-a6b24cb9edd04810b582721be1bfd279">Gitcoin</a></td><td class="cell-CUXK">Gitcoin is the community of builders, creators, and protocols at the center of open web ecosystems</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span></td><td class="cell-;yc["><a href="https://gitcoin.co" class="url-value">https://gitcoin.co</a></td><td class="cell-ctYf"><a href="https://twitter.com/gitcoin" class="url-value">https://twitter.com/gitcoin</a></td></tr><tr id="1b9d2727-3b0f-4878-8af1-8a36a19d177d"><td class="cell-title"><a href="https://www.notion.so/GitHub-1b9d27273b0f48788af18a36a19d177d">GitHub</a></td><td class="cell-CUXK">GitHub is a provider of Internet hosting for software development and version control using Git. It offers the distributed version control and source code management (SCM) functionality of Git, plus its own features. It provides access control and several collaboration features such as bug tracking
+, feature requests, task management, continuous integration and wikis for every project.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span><span class="selected-value select-value-color-blue">Infrastructure</span><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://github.com/" class="url-value">https://github.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/github" class="url-value">https://twitter.com/github</a></td></tr><tr id="4822a7d1-1aa2-4e37-97bd-1f5077f966bf"><td class="cell-title"><a href="https://www.notion.so/Gnosis-Safe-4822a7d11aa24e3797bd1f5077f966bf">Gnosis Safe</a></td><td class="cell-CUXK">Gnosis Safe is a smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N). If for example you have 3 main stakeholders in your business, you are able to set up the wallet to require approval from all 3 people before the transaction is sent. This assures that no single person could compromise the funds.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://forefront.market/canon/tools" class="url-value">https://forefront.market/canon/tools</a></td><td class="cell-ctYf"><a href="https://twitter.com/gnosisSafe" class="url-value">https://twitter.com/gnosisSafe</a></td></tr><tr id="75b65e55-b1a6-4060-9128-263dcfc522d0"><td class="cell-title"><a href="https://www.notion.so/Guild-75b65e55b1a640609128263dcfc522d0">Guild</a></td><td class="cell-CUXK">Guild is an Agora Space product which facilitates the setup of token-gated Discord channels and roles, based on ownership of cross-chain, fungible and non-fungible tokens (NFTs).</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://guild.xyz/" class="url-value">https://guild.xyz/</a></td><td class="cell-ctYf"></td></tr><tr id="ba4c0c02-fe62-4f3e-856f-c00e251db060"><td class="cell-title"><a href="https://www.notion.so/HackMD-ba4c0c02fe624f3e856fc00e251db060">HackMD</a></td><td class="cell-CUXK">HackMD is a real-time, multi-platform collaborative Markdown editor. You can use HackMD to write notes with other people on your computer, tablet, or phone.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://hackmd.io/" class="url-value">https://hackmd.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/hackmdio" class="url-value">https://twitter.com/hackmdio</a></td></tr><tr id="b468d37e-db73-4e7d-87e0-6dc1871891e8"><td class="cell-title"><a href="https://www.notion.so/How-to-develop-and-launch-your-DeFi-project-b468d37edb734e7d87e06dc1871891e8">How to develop and launch your DeFi project</a></td><td class="cell-CUXK">This is a step by step guide on how to develop your Decentralized Finance (DeFi) project.</td><td class="cell-wB@p"><span class="selected-value select-value-color-yellow">DeFi Guide</span></td><td class="cell-;yc["><a href="https://blockster.com/blockdesk/817_how-to-develop-and-launch-your-defi-project" class="url-value">https://blockster.com/blockdesk/817_how-to-develop-and-launch-your-defi-project</a></td><td class="cell-ctYf"></td></tr><tr id="c755a4bb-f9a3-4a38-9ecf-98b7b4a17fbe"><td class="cell-title"><a href="https://www.notion.so/Idavoll-c755a4bbf9a34a389ecf98b7b4a17fbe">Idavoll</a></td><td class="cell-CUXK">Idavoll is a Decentralized Autonomous Organization (DAO) management service provider
+that unpacks necessary infrastructure and services, to enable better project/user
+communication and management, that includes DAO creation and management toolbox,
+court, investment concurrent resolution and social discussion panel.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span></td><td class="cell-;yc["><a href="https://idavoll.network/" class="url-value">https://idavoll.network/</a></td><td class="cell-ctYf"><a href="https://twitter.com/idavollDAO" class="url-value">https://twitter.com/idavollDAO</a></td></tr><tr id="21a1a24e-42b0-4890-a30a-7013cdd90684"><td class="cell-title"><a href="https://www.notion.so/IDX-21a1a24e42b04890a30a7013cdd90684">IDX</a></td><td class="cell-CUXK">IDX is a decentralized Identity protocol for individuals to own, cultivate, permission and use their unified digital identities at will. It is part of Credify, which facilitates commercial use of such data.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://idx.xyz/" class="url-value">https://idx.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/identityindex" class="url-value">https://twitter.com/identityindex</a></td></tr><tr id="53e98337-b270-49a9-9b9c-16832a23e916"><td class="cell-title"><a href="https://www.notion.so/Immunefi-53e98337b27049a99b9c16832a23e916">Immunefi</a></td><td class="cell-CUXK">Immunefi runs a bug bounty platform to test and guard blockchain security, and specifically smart contracts. Its bounties are attended by a network of registered hackers.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">Security &amp; Privacy</span></td><td class="cell-;yc["><a href="https://immunefi.com/" class="url-value">https://immunefi.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/immunefi" class="url-value">https://twitter.com/immunefi</a></td></tr><tr id="98d399b1-688c-45e0-8bba-0fe93951aaa4"><td class="cell-title"><a href="https://www.notion.so/IPFS-98d399b1688c45e08bba0fe93951aaa4">IPFS</a></td><td class="cell-CUXK">The InterPlanetary File System is a protocol network for a Web3 decentralized, resillient and private file storage &amp; access.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://ipfs.io/" class="url-value">https://ipfs.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/ipfs" class="url-value">https://twitter.com/ipfs</a></td></tr><tr id="68574b0c-166c-49ac-9355-9ba2cb68cb39"><td class="cell-title"><a href="https://www.notion.so/Juicebox-68574b0c166c49ac93559ba2cb68cb39">Juicebox</a></td><td class="cell-CUXK">Juicebox is dedicated to developing DAO treasury management software. The protocol is built to support small projects with grand visions as well as large projects that have complex operations. DAOs crowdfunded on Juicebox will be able to calibrate incentives and allocations for their users and contributors over time.</td><td class="cell-wB@p"><span class="selected-value select-value-color-purple">Funding</span></td><td class="cell-;yc["><a href="https://juicebox.money/#/" class="url-value">https://juicebox.money/#/</a></td><td class="cell-ctYf"><a href="https://twitter.com/juiceboxeth" class="url-value">https://twitter.com/juiceboxeth</a></td></tr><tr id="d4bc2282-b5d3-480c-9d32-3363c0c6a913"><td class="cell-title"><a href="https://www.notion.so/Kleros-d4bc2282b5d3480c9d323363c0c6a913">Kleros</a></td><td class="cell-CUXK">Kleros is a crowdsourcing, smart contracts dispute resolution protocol, coupled with an Identity verification product. Its use cases currently include oracle, insurance, escrow and market translations disputes.</td><td class="cell-wB@p"><span class="selected-value select-value-color-green">Dispute Resolution</span></td><td class="cell-;yc["><a href="https://kleros.io/" class="url-value">https://kleros.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/kleros_io?" class="url-value">https://twitter.com/kleros_io?</a></td></tr><tr id="a3f8c5d1-c7fe-4c8a-a314-9e72cf222095"><td class="cell-title"><a href="https://www.notion.so/LexDAO-a3f8c5d1c7fe4c8aa3149e72cf222095">LexDAO</a></td><td class="cell-CUXK">LexDAO is a non-profit association of legal engineers that interweives legacy Law and smart contracts. It offers a suite of Limited Liability Company wrappers for DAOs, and secure assets regulation.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-green">Legal</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://www.lexdao.coop/" class="url-value">https://www.lexdao.coop/</a></td><td class="cell-ctYf"><a href="https://twitter.com/lex_DAO" class="url-value">https://twitter.com/lex_DAO</a></td></tr><tr id="e4c6a150-8c82-419b-9bcc-068954e70c90"><td class="cell-title"><a href="https://www.notion.so/Llama-e4c6a1508c82419b9bcc068954e70c90">Llama</a></td><td class="cell-CUXK">Llama produces a suite of products and services for DAO treasuries, including asset management &amp; analysis, financial reporting and DAO-to-DAO financial interactions.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://llama.xyz/" class="url-value">https://llama.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/llamacommunity_" class="url-value">https://twitter.com/llamacommunity_</a></td></tr><tr id="9b8b0d6f-9394-4a3e-baa1-8f5c60d6bdb7"><td class="cell-title"><a href="https://www.notion.so/Medium-9b8b0d6f93944a3ebaa18f5c60d6bdb7">Medium</a></td><td class="cell-CUXK">Medium is an open platform where readers find dynamic thinking, and where expert and undiscovered voices can share their writing on any topic.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Media &amp; Comms.</span></td><td class="cell-;yc["><a href="https://medium.com/" class="url-value">https://medium.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/Medium" class="url-value">https://twitter.com/Medium</a></td></tr><tr id="16240e31-61fb-4611-b6d3-3628f948b43a"><td class="cell-title"><a href="https://www.notion.so/MetaGov-16240e3161fb4611b6d33628f948b43a">MetaGov</a></td><td class="cell-CUXK">The Metagovernance Project
+ is an interdisciplinary research collective. They build standards and infrastructure for digital self-governance.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://metagov.org/" class="url-value">https://metagov.org/</a></td><td class="cell-ctYf"></td></tr><tr id="46ee2bf3-dd9f-47f0-9ea8-fa5cb45ba031"><td class="cell-title"><a href="https://www.notion.so/Mintgate-46ee2bf3dd9f47f09ea8fa5cb45ba031">Mintgate</a></td><td class="cell-CUXK">MintGate is a platform that allows users to create new NFTs that can include unlockable content or generate gated links for token holders.
+Unlockable content is media that requires proven ownership of an NFT or social token in order to gain access.
+The platform also allows users to sell and buy NFTs using ETH. NFTs minted through MintGate are also available on Rarible.
+MintGate has just released a new product, which allows users to create their own branded NFT store, with MintGate’s technology powering the backend.
+There are a few web3 solutions that offer token gating through different mechanisms - Guild for Discord, Orca for working groups and MintGate for exclusive content.</td><td class="cell-wB@p"><span class="selected-value select-value-color-pink">NFTs</span></td><td class="cell-;yc["><a href="https://app.mintgate.io/" class="url-value">https://app.mintgate.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/mintgate_io" class="url-value">https://twitter.com/mintgate_io</a></td></tr><tr id="138210a5-07c4-4021-b332-aa471c13d1da"><td class="cell-title"><a href="https://www.notion.so/Mirror-138210a507c44021b332aa471c13d1da">Mirror</a></td><td class="cell-CUXK">Mirror is a writers&#x27; collective, ideating and community-building through Web3 media &amp; publications. Participation is NFT-based and content may be easily NFT-minted and managed on-platform by its creators.</td><td class="cell-wB@p"><span class="selected-value select-value-color-yellow">Art &amp; Culture</span><span class="selected-value select-value-color-orange">Media &amp; Comms.</span><span class="selected-value select-value-color-pink">NFTs</span></td><td class="cell-;yc["><a href="https://mirror.xyz/" class="url-value">https://mirror.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/viamirror" class="url-value">https://twitter.com/viamirror</a></td></tr><tr id="f10f3b2d-eec9-4b54-8904-2e9620163d03"><td class="cell-title"><a href="https://www.notion.so/Multis-f10f3b2deec94b5489042e9620163d03">Multis</a></td><td class="cell-CUXK">Multis is building a financial backbone for web3 organizations. An all-in-one application to help web3 organizations manage their crypto finances.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://multis.co/" class="url-value">https://multis.co/</a></td><td class="cell-ctYf"><a href="https://twitter.com/multishq" class="url-value">https://twitter.com/multishq</a></td></tr><tr id="34e7fecb-e239-4d54-bb4f-e95059ec1b1e"><td class="cell-title"><a href="https://www.notion.so/Myco-34e7fecbe2394d54bb4fe95059ec1b1e">Myco</a></td><td class="cell-CUXK">Myco is an all-in-one platform that enables Digital Social Clubs to create digital media as a group and collectively own the economic rights associated with their actions.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://www.myco.space/" class="url-value">https://www.myco.space/</a></td><td class="cell-ctYf"><a href="https://twitter.com/mycodotspace" class="url-value">https://twitter.com/mycodotspace</a></td></tr><tr id="f0312a04-2ffe-4986-b91b-7adb1a5ad83a"><td class="cell-title"><a href="https://www.notion.so/Nexus-Mutual-f0312a042ffe4986b91b7adb1a5ad83a">Nexus Mutual</a></td><td class="cell-CUXK">Nexus Mutual supplies on-chain insurance through liquidity pools and decentralized validation of customers&#x27; claims. Governed by permissioned NXM token holders, it currently covers smart contracts risks and aims further.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://nexusmutual.io/" class="url-value">https://nexusmutual.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/NexusMutual" class="url-value">https://twitter.com/NexusMutual</a></td></tr><tr id="0e21e8ad-f656-4cfe-8a99-05cf09625fa9"><td class="cell-title"><a href="https://www.notion.so/Notion-0e21e8adf6564cfe8a9905cf09625fa9">Notion</a></td><td class="cell-CUXK">Notion is a set of building blocks for creating things you love to use on your computer, such as documents, databases, public websites, knowledge bases , project management systems and more.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://www.notion.so/" class="url-value">https://www.notion.so/</a></td><td class="cell-ctYf"><a href="https://twitter.com/NotionHQ" class="url-value">https://twitter.com/NotionHQ</a></td></tr><tr id="69b6960a-38b0-48b9-ba1a-fc86c1134f10"><td class="cell-title"><a href="https://www.notion.so/Obsidian-69b6960a38b048b9ba1afc86c1134f10">Obsidian</a></td><td class="cell-CUXK">Obsidian is a powerful knowledge base on top of a local folder of plain text Markdown files.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://obsidian.md/" class="url-value">https://obsidian.md/</a></td><td class="cell-ctYf"><a href="https://twitter.com/obsdmd" class="url-value">https://twitter.com/obsdmd</a></td></tr><tr id="1140de71-26e2-400d-9f26-5ba7069535d8"><td class="cell-title"><a href="https://www.notion.so/OpenZeppelin-1140de7126e2400d9f265ba7069535d8">OpenZeppelin</a></td><td class="cell-CUXK">OpenZeppelin provides security products to build, automate, and operate decentralized applications. We also protect leading organizations by performing security audits on their systems and products.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Infrastructure</span><span class="selected-value select-value-color-default">Security &amp; Privacy</span></td><td class="cell-;yc["><a href="https://openzeppelin.com/" class="url-value">https://openzeppelin.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/openzeppelin" class="url-value">https://twitter.com/openzeppelin</a></td></tr><tr id="5e125aaa-950e-4464-a397-02af6eb17892"><td class="cell-title"><a href="https://www.notion.so/Opolis-5e125aaa950e4464a39702af6eb17892">Opolis</a></td><td class="cell-CUXK">Opolis allows independent workers (such as freelancers, gig workers, and DAO contributors) to access benefits typically reserved for corporations (ex, medical insurance and retirement plans.)</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://opolis.co/" class="url-value">https://opolis.co/</a></td><td class="cell-ctYf"><a href="https://twitter.com/opolis" class="url-value">https://twitter.com/opolis</a></td></tr><tr id="3e881435-bece-4329-876e-f231d4efa2b7"><td class="cell-title"><a href="https://www.notion.so/Orca-3e881435bece4329876ef231d4efa2b7">Orca</a></td><td class="cell-CUXK">Orca enables DAOs to implement pods. Pods give users a clean and easy-to-use UI to create and approve proposals within a small working group and allow DAOs to create organizational structure. From the user’s perspective, a pod is a clean and easy-to-use interface for multi-sigs. Under the hood, a pod is a Gnosis Safe with a light governance wrapper.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://www.orcaprotocol.org/" class="url-value">https://www.orcaprotocol.org/</a></td><td class="cell-ctYf"><a href="https://twitter.com/OrcaProtocol" class="url-value">https://twitter.com/OrcaProtocol</a></td></tr><tr id="c68bd8c0-00e8-43df-907f-b0ef076afd49"><td class="cell-title"><a href="https://www.notion.so/Paladin-c68bd8c000e843df907fb0ef076afd49">Paladin</a></td><td class="cell-CUXK">Paladin DAO is a decentralized reserve currency that runs on the Binance smart chain.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://paladin-dao.com/" class="url-value">https://paladin-dao.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/DaoPaladin" class="url-value">https://twitter.com/DaoPaladin</a></td></tr><tr id="b22e2c29-387c-4774-8eb6-7f447653a511"><td class="cell-title"><a href="https://www.notion.so/Parcel-b22e2c29387c47748eb67f447653a511">Parcel</a></td><td class="cell-CUXK">A treasury management tool for DAOs, serving inbuilt Gnosis Safe, recurring and mass payments, and strategies for yield and asset management.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://parcel.money/" class="url-value">https://parcel.money/</a></td><td class="cell-ctYf"><a href="https://twitter.com/parcelHQ" class="url-value">https://twitter.com/parcelHQ</a></td></tr><tr id="4a01cc28-95e5-4315-8ca5-0f6418a08ff5"><td class="cell-title"><a href="https://www.notion.so/POAP-4a01cc2895e543158ca50f6418a08ff5">POAP</a></td><td class="cell-CUXK">POAP enables a new way of keeping long-lasting records of life experiences. A POAP is a digital collectible created as a NFT (non-fungible token) powered by the blockchain.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://poap.xyz/" class="url-value">https://poap.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/poapxyz/" class="url-value">https://twitter.com/poapxyz/</a></td></tr><tr id="5749b92f-6cb9-4784-aaac-14fda3934e7b"><td class="cell-title"><a href="https://www.notion.so/PolicyKit-5749b92f6cb94784aaac14fda3934e7b">PolicyKit</a></td><td class="cell-CUXK">PolicyKit empowers online community members to concisely author a wide range of governance procedures and automatically carry out those procedures on their home platforms.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://policykit.org/" class="url-value">https://policykit.org/</a></td><td class="cell-ctYf"></td></tr><tr id="12e06b77-3a8c-4efa-9bf6-d4fcc966ffc2"><td class="cell-title"><a href="https://www.notion.so/Proof-of-Humanity-12e06b773a8c4efa9bf6d4fcc966ffc2">Proof of Humanity</a></td><td class="cell-CUXK">Proof of Humanity, a system combining webs of trust, with reverse Turing tests, and dispute resolution to create a sybil-proof list of humans.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://www.proofofhumanity.id/" class="url-value">https://www.proofofhumanity.id/</a></td><td class="cell-ctYf"><a href="https://twitter.com/proofofhumanity" class="url-value">https://twitter.com/proofofhumanity</a></td></tr><tr id="bbaa2880-0ebe-4adc-848f-d3edaf4c652a"><td class="cell-title"><a href="https://www.notion.so/Rabbithole-bbaa28800ebe4adc848fd3edaf4c652a">Rabbithole</a></td><td class="cell-CUXK">Rabbithole cooperates with web3 projects to reward new users for constructive participation in project dapps / platforms. Users learn, earn and build a verified resume&#x27;, projects gain discovery and involvement.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span><span class="selected-value select-value-color-brown">DAO Guide</span><span class="selected-value select-value-color-blue">Identity</span></td><td class="cell-;yc["><a href="https://rabbithole.gg/" class="url-value">https://rabbithole.gg/</a></td><td class="cell-ctYf"><a href="https://twitter.com/rabbithole_gg" class="url-value">https://twitter.com/rabbithole_gg</a></td></tr><tr id="fa6d8fc2-a8df-42cb-a449-349f72e87a16"><td class="cell-title"><a href="https://www.notion.so/Radicle-fa6d8fc2a8df42cba449349f72e87a16">Radicle</a></td><td class="cell-CUXK">Radicle is a platform that enables decentralized code collaboration. In other words, it provides Git-like peer-to-peer functionality without relying on trusted intermediaries.
+It also comes with Ethereum integration, which allows users to do things like linking their ENS name to their profiles, gaining access to Radicle funding, and even creating a DAO or linking their existing DAO to Radicle.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://radicle.xyz/" class="url-value">https://radicle.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/radicle" class="url-value">https://twitter.com/radicle</a></td></tr><tr id="51258785-b481-4300-bc1b-88f4e0da5050"><td class="cell-title"><a href="https://www.notion.so/Rally-51258785b4814300bc1b88f4e0da5050">Rally</a></td><td class="cell-CUXK">Rally is a platform for creators and collectives to autonomously own, present and trade their branded NFT&#x27;s, while also curate their own tokenized community of fans, collectors and any interested parties.</td><td class="cell-wB@p"><span class="selected-value select-value-color-yellow">Art &amp; Culture</span><span class="selected-value select-value-color-pink">NFTs</span></td><td class="cell-;yc["><a href="https://rally.io/" class="url-value">https://rally.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/rally_io" class="url-value">https://twitter.com/rally_io</a></td></tr><tr id="6ef23a04-f717-4750-aa85-04490d938da9"><td class="cell-title"><a href="https://www.notion.so/Request-6ef23a04f7174750aa8504490d938da9">Request</a></td><td class="cell-CUXK">Request is a payments tool for direct, cross-bloackchain cryptocurrencies payments with minimal involvement of txn sides&#x27; information. Its invoices may designate any special terms and conditions.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://request.network/en/" class="url-value">https://request.network/en/</a></td><td class="cell-ctYf"><a href="https://twitter.com/RequestNetwork" class="url-value">https://twitter.com/RequestNetwork</a></td></tr><tr id="e572c4c0-96fb-41bd-9132-a42d79366d7f"><td class="cell-title"><a href="https://www.notion.so/Roam-e572c4c096fb41bd9132a42d79366d7f">Roam</a></td><td class="cell-CUXK">A note-taking tool for networked thought. As easy to use as a document. As powerful as a graph database.
+Roam helps you organize your research for the long haul.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Knowledge Management</span></td><td class="cell-;yc["><a href="https://roamresearch.com/" class="url-value">https://roamresearch.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/RoamResearch" class="url-value">https://twitter.com/RoamResearch</a></td></tr><tr id="92e16ed6-83eb-4e01-be38-2f3c3de1b858"><td class="cell-title"><a href="https://www.notion.so/Rocket-Chat-92e16ed683eb4e01be382f3c3de1b858">Rocket.Chat</a></td><td class="cell-CUXK">Rocket. Chat is a fully customizable communications platform for organizations with high standards of data protection. It enables real-time conversations between colleagues, with other companies or with your customers, regardless of how they connect with you.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Discussion</span><span class="selected-value select-value-color-orange">Media &amp; Comms.</span></td><td class="cell-;yc["><a href="https://rocket.chat/" class="url-value">https://rocket.chat/</a></td><td class="cell-ctYf"><a href="https://twitter.com/RocketChat" class="url-value">https://twitter.com/RocketChat</a></td></tr><tr id="883928f9-d1ca-4c6f-b1dd-04d17a4912f5"><td class="cell-title"><a href="https://www.notion.so/Roll-883928f9d1ca4c6fb1dd04d17a4912f5">Roll</a></td><td class="cell-CUXK">The Roll network mints branded digital tokens, which it refers to as social money. These tokens allow a creator to own, control, and coordinate the value they create across social media platforms and within their community. Tokens are minted on the Ethereum blockchain using the ERC20 standard.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://tryroll.com/" class="url-value">https://tryroll.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/tryrollhq" class="url-value">https://twitter.com/tryrollhq</a></td></tr><tr id="e583466f-322b-4d57-b88b-a96e406750be"><td class="cell-title"><a href="https://www.notion.so/Sablier-e583466f322b4d57b88ba96e406750be">Sablier</a></td><td class="cell-CUXK">Sablier creates stable, constant streams of funds between crypto addresses and applications, serving different payments use cases. It is a product of the HiFi landing protocol.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://sablier.finance/" class="url-value">https://sablier.finance/</a></td><td class="cell-ctYf"><a href="https://twitter.com/sablierhq" class="url-value">https://twitter.com/sablierhq</a></td></tr><tr id="f6f299c6-2fd2-4927-8062-e5d68c9e2e63"><td class="cell-title"><a href="https://www.notion.so/SafeSnap-f6f299c62fd249278062e5d68c9e2e63">SafeSnap</a></td><td class="cell-CUXK">SafeSnap is Gnosis Safe served by Snapshot voting. It allows DAOs to effortlessly implement their community&#x27;s off-chain Snapshot decision as binding on-chain transactions on Gnosis Safes.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://docs.snapshot.org/plugins/safesnap" class="url-value">https://docs.snapshot.org/plugins/safesnap</a></td><td class="cell-ctYf"></td></tr><tr id="e3019d57-c3f3-49ce-ae0f-58476e061bdf"><td class="cell-title"><a href="https://www.notion.so/Smart-Invoice-e3019d57c3f349ceae0f58476e061bdf">Smart Invoice</a></td><td class="cell-CUXK">Smart Invoice is a sophisticated invoicing tool that handles payments between organizations (which are also called “clients”), and freelancers (which are also called “providers”). Smart Invoice establishes a set of shared expectations between a client and a service provider who are engaged in business with one another.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://smartinvoice.xyz/" class="url-value">https://smartinvoice.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/RaidGuild" class="url-value">https://twitter.com/RaidGuild</a></td></tr><tr id="e8db77cd-a02d-4f23-9858-f6a7965003a9"><td class="cell-title"><a href="https://www.notion.so/Snapshot-e8db77cda02d4f239858f6a7965003a9">Snapshot</a></td><td class="cell-CUXK">Snapshot is a decentralized voting system. It provides flexibility on how voting power is calculated for vote. Snapshot supports various voting types to cater to the needs of organizations. Creating proposals and voting on Snapshot is user friendly and does not cost any gas as the process is performed off-chain. In short, Snapshot is an off-chain gasless multi-governance client with easy to verify and hard to contest results.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span></td><td class="cell-;yc["><a href="https://snapshot.org/#/" class="url-value">https://snapshot.org/#/</a></td><td class="cell-ctYf"><a href="https://twitter.com/SnapshotLabs" class="url-value">https://twitter.com/SnapshotLabs</a></td></tr><tr id="1ead25e8-b322-42af-b178-28edda447f03"><td class="cell-title"><a href="https://www.notion.so/Sobol-1ead25e8b32242afb17828edda447f03">Sobol</a></td><td class="cell-CUXK">Sobol maps accountability across your entire ecosystem so teams can move fast with alignment and trust. It focuses on people, so shows transparent structures by mapping all the roles and team members. It also connects goals and captures signed agreements.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Identity</span><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://sobol.io/" class="url-value">https://sobol.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/teamsobol" class="url-value">https://twitter.com/teamsobol</a></td></tr><tr id="241efc3e-2942-4573-adf4-f9ce676fe223"><td class="cell-title"><a href="https://www.notion.so/SourceCred-241efc3e29424573adf4f9ce676fe223">SourceCred</a></td><td class="cell-CUXK">SourceCred is a tokenized protocol allowing communities to track, appreciate and reward project and community contributions, according to flexible, self-set parameters.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span><span class="selected-value select-value-color-blue">Identity</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://sourcecred.io/" class="url-value">https://sourcecred.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/sourcecred" class="url-value">https://twitter.com/sourcecred</a></td></tr><tr id="9ac9afc5-76ae-467a-a3ef-4893dd0649e3"><td class="cell-title"><a href="https://www.notion.so/SputnikDAO-9ac9afc576ae467aa3ef4893dd0649e3">SputnikDAO</a></td><td class="cell-CUXK">SputnikDAO is a hub of DAOs empowering communities of the NEAR ecosystem. Receive rewards for individual contributions by submitting proposals to existing DAOs. Create a guild for your own meaningful project to find allies and monthly funding.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://www.sputnik.fund/#/" class="url-value">https://www.sputnik.fund/#/</a></td><td class="cell-ctYf"><a href="https://twitter.com/NEARProtocol" class="url-value">https://twitter.com/NEARProtocol</a></td></tr><tr id="6406510f-13e4-4156-8cd4-0df65ee7e356"><td class="cell-title"><a href="https://www.notion.so/Superfluid-6406510f13e441568cd40df65ee7e356">Superfluid</a></td><td class="cell-CUXK">Superfluid is a real-time payments tool that enables programmable and streaming payments. Superfluid provides developers and end-users alike the ability to pay and be paid in a more automated, customisable and seamless manner than conventional banking and FinTech.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://www.superfluid.finance/home" class="url-value">https://www.superfluid.finance/home</a></td><td class="cell-ctYf"><a href="https://twitter.com/Superfluid_HQ" class="url-value">https://twitter.com/Superfluid_HQ</a></td></tr><tr id="20e6fed9-0741-4521-91bb-e5eb95918f7a"><td class="cell-title"><a href="https://www.notion.so/Sybil-20e6fed90741452191bbe5eb95918f7a">Sybil</a></td><td class="cell-CUXK">Sybil is a governance tool for discovering delegates. Sybil maps on-chain addresses to digital identities to maintain a list of delegates. These verified mappings are public and open for anyone to use.
+One use case for Sybil is governance systems on Ethereum. Delegates and voters in these systems benefit from seeing real-world identities attached to Ethereum addresses.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://sybil.org/" class="url-value">https://sybil.org/</a></td><td class="cell-ctYf"></td></tr><tr id="2441e0ab-8941-4b45-b9d3-d3b7d5b8cb63"><td class="cell-title"><a href="https://www.notion.so/Syndicate-2441e0ab89414b45b9d3d3b7d5b8cb63">Syndicate</a></td><td class="cell-CUXK">Syndicate an investment protocol allowing communities to easily create strategically focused, blockchain-based investment funds - DAO syndicates, with a stress on democratization and diversity.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://syndicate.io/" class="url-value">https://syndicate.io/</a></td><td class="cell-ctYf"><a href="https://twitter.com/SyndicateDAO" class="url-value">https://twitter.com/SyndicateDAO</a></td></tr><tr id="9e3224e9-b054-4de4-97bf-cb5130881695"><td class="cell-title"><a href="https://www.notion.so/Tally-9e3224e9b0544de497bfcb5130881695">Tally</a></td><td class="cell-CUXK">Tally is a portal for Compound Governance DAOs, offering the a decision-making &amp; management UI and an explorer for their activity and membership. It also serves educational materials and a newsletter focused on decentralized governance.</td><td class="cell-wB@p"><span class="selected-value select-value-color-gray">Analytics</span><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://www.withtally.com/" class="url-value">https://www.withtally.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/voteWithTally" class="url-value">https://twitter.com/voteWithTally</a></td></tr><tr id="2e37075c-b4d4-4de3-971a-2000303ae65f"><td class="cell-title"><a href="https://www.notion.so/Telegram-2e37075cb4d44de3971a2000303ae65f">Telegram</a></td><td class="cell-CUXK">Telegram is a messaging app with a focus on speed and security, it’s super-fast, simple and free. You can use Telegram on all your devices at the same time — your messages sync seamlessly across any number of your phones, tablets or computers. Telegram has over 500 million monthly active users and is one of the 10 most downloaded apps in the world.
+With Telegram, you can send messages, photos, videos and files of any type (doc, zip, mp3, etc), as well as create groups for up to 200,000 people or channels for broadcasting to unlimited audiences. You can write to your phone contacts and find people by their usernames. As a result, Telegram is like SMS and email combined — and can take care of all your personal or business messaging needs. In addition to this, we support end-to-end encrypted voice and video calls, as well as voice chats in groups for thousands of participants.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Discussion</span><span class="selected-value select-value-color-orange">Media &amp; Comms.</span></td><td class="cell-;yc["><a href="https://telegram.org/" class="url-value">https://telegram.org/</a></td><td class="cell-ctYf"><a href="https://twitter.com/telegram" class="url-value">https://twitter.com/telegram</a></td></tr><tr id="92932000-7203-467b-ac89-d621ae168a9e"><td class="cell-title"><a href="https://www.notion.so/The-DAO-of-DAOs-929320007203467bac89d621ae168a9e">The DAO of DAOs</a></td><td class="cell-CUXK">What are DAOs&#x27; 7 special powers? a thorough, engaging reading into DAOs and possible future. Author: Packy McCormick.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://www.notboring.co/p/the-dao-of-daos?utm_source=url" class="url-value">https://www.notboring.co/p/the-dao-of-daos?utm_source=url</a></td><td class="cell-ctYf"></td></tr><tr id="7a1aa65e-1cfd-4150-8f5f-db430c695daf"><td class="cell-title"><a href="https://www.notion.so/The-DAOist-7a1aa65e1cfd41508f5fdb430c695daf">The DAOist</a></td><td class="cell-CUXK">The DAOist is an active DAO ecosystem collaboration for online and offline DAO-related events, media and community-building.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Media &amp; Comms.</span></td><td class="cell-;yc["><a href="https://www.thedaoist.co/" class="url-value">https://www.thedaoist.co/</a></td><td class="cell-ctYf"><a href="https://twitter.com/TheDAOist_" class="url-value">https://twitter.com/TheDAOist_</a></td></tr><tr id="10d78c94-53b5-4627-8a2c-b4af715055b7"><td class="cell-title"><a href="https://www.notion.so/Thirdweb-10d78c9453b546278a2cb4af715055b7">Thirdweb</a></td><td class="cell-CUXK">Smart contracts, SDKs and UI components that creators, game studios and developers can integrate into their app. With Thirdweb you can create NFTs and custom tokens, manage drops, develop your own white label marketplace, and much more.</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://thirdweb.com/" class="url-value">https://thirdweb.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/thirdweb_" class="url-value">https://twitter.com/thirdweb_</a></td></tr><tr id="baa03952-a497-484f-b50f-9f5d63cde070"><td class="cell-title"><a href="https://www.notion.so/TokenSets-baa03952a497484fb50f9f5d63cde070">TokenSets</a></td><td class="cell-CUXK">TokenSets runs the permissionless Set asset management protocol, which integrates various DeFi products into strategizable investments/treasury portfolios.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://www.tokensets.com/" class="url-value">https://www.tokensets.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/SetProtocol" class="url-value">https://twitter.com/SetProtocol</a></td></tr><tr id="682ff8ba-d7ab-46c8-bc84-4408fe5ed9e7"><td class="cell-title"><a href="https://www.notion.so/Tribute-682ff8bad7ab46c8bc844408fe5ed9e7">Tribute</a></td><td class="cell-CUXK">Designed to make DAO&#x27;s easy to assemble, like lego blocks, utilizing a narrowly-defined, tested, and extensible set smart contracts.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-blue">Infrastructure</span></td><td class="cell-;yc["><a href="https://tributedao.com/" class="url-value">https://tributedao.com/</a></td><td class="cell-ctYf"></td></tr><tr id="6aad9a75-926c-49f1-aabe-32fd6391bd90"><td class="cell-title"><a href="https://www.notion.so/Twitter-6aad9a75926c49f1aabe32fd6391bd90">Twitter</a></td><td class="cell-CUXK">Twitter is an online news and social networking site where people communicate in short messages called
+ tweets.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Discussion</span><span class="selected-value select-value-color-orange">Media &amp; Comms.</span></td><td class="cell-;yc["><a href="https://twitter.com" class="url-value">https://twitter.com</a></td><td class="cell-ctYf"><a href="https://twitter.com/Twitter" class="url-value">https://twitter.com/Twitter</a></td></tr><tr id="a4aed616-74c3-451b-a568-bf5ab1ed8dfa"><td class="cell-title"><a href="https://www.notion.so/Unslashed-Finance-a4aed61674c3451ba568bf5ab1ed8dfa">Unslashed Finance</a></td><td class="cell-CUXK">Unslashed is a decentralized insurance protocol for common crypto risks, collateralled by lilquidity pools. It is governed by its tokens holders through the Unslashed DAO.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://unslashed.finance/" class="url-value">https://unslashed.finance/</a></td><td class="cell-ctYf"><a href="https://twitter.com/UnslashedF" class="url-value">https://twitter.com/UnslashedF</a></td></tr><tr id="25e7a349-8290-4444-958a-ee35fe908152"><td class="cell-title"><a href="https://www.notion.so/Upstream-Collectives-25e7a34982904444958aee35fe908152">Upstream Collectives</a></td><td class="cell-CUXK">Upstream Collectives is a multi-feature platform that enables the set-up and operation of a DAO or any self-governed community, which it calls a “Collective”.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://upstreamapp.com/collectives" class="url-value">https://upstreamapp.com/collectives</a></td><td class="cell-ctYf"><a href="https://twitter.com/joinupstream" class="url-value">https://twitter.com/joinupstream</a></td></tr><tr id="fe129e61-cf78-4f9e-af8c-6cb86736ddcd"><td class="cell-title"><a href="https://www.notion.so/Utopia-fe129e61cf784f9eaf8c6cb86736ddcd">Utopia</a></td><td class="cell-CUXK">Utopia is an app that attaches to Gnosis Safes and allows DAO managers to set recurring payments (e.g. salaries), receive payment/refund requests from members, and create an annotated transaction history for approved and rejected payments.</td><td class="cell-wB@p"><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://www.utopialabs.com/" class="url-value">https://www.utopialabs.com/</a></td><td class="cell-ctYf"><a href="https://twitter.com/utopialabs_" class="url-value">https://twitter.com/utopialabs_</a></td></tr><tr id="47a8ba27-68ce-4b20-9405-26329a042e53"><td class="cell-title"><a href="https://www.notion.so/Vocdoni-47a8ba2768ce4b20940526329a042e53">Vocdoni</a></td><td class="cell-CUXK">VocdoniAn Aragon product since early 2021, Vocdoni developed and runs Vochain - a blockchain that&#x27;s designed to allow infinitely scalable, free, permissionless, anonymous, on-chain voting.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span></td><td class="cell-;yc["><a href="https://aragon.org/vocdoni" class="url-value">https://aragon.org/vocdoni</a></td><td class="cell-ctYf"><a href="https://twitter.com/AragonProject" class="url-value">https://twitter.com/AragonProject</a></td></tr><tr id="288dd274-df67-4962-9921-45f016b2222b"><td class="cell-title"><a href="https://www.notion.so/What-is-a-Decentralized-Autonomous-Organization-DAO-288dd274df674962992145f016b2222b">What is a Decentralized Autonomous Organization (DAO)?</a></td><td class="cell-CUXK">A Bulletpoint introduction to DAOs and some of their typical characteristics and use cases. Authors: Matt Hussey, Adriana Hamacher, Stephen Graves.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">DAO Guide</span></td><td class="cell-;yc["><a href="https://decrypt.co/resources/decentralized-autonomous-organization-dao" class="url-value">https://decrypt.co/resources/decentralized-autonomous-organization-dao</a></td><td class="cell-ctYf"></td></tr><tr id="eb89e01b-9b2a-48ef-9e9c-a383f3f0ac34"><td class="cell-title"><a href="https://www.notion.so/Wonderverse-eb89e01b9b2a48ef9e9ca383f3f0ac34">Wonderverse</a></td><td class="cell-CUXK">This DAO native tool is a platform which combines critical pieces to manage participation in a DAO. Primarily a project management tool integrated into crypto, it strives to be a one stop shop for all things DAO participation</td><td class="cell-wB@p"><span class="selected-value select-value-color-blue">Contribution &amp; Reputation</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://www.wonderverse.xyz/" class="url-value">https://www.wonderverse.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/wonderverse_xyz" class="url-value">https://twitter.com/wonderverse_xyz</a></td></tr><tr id="0eecfcca-7b90-4ea8-992e-c9ded0fcb5d5"><td class="cell-title"><a href="https://www.notion.so/XDAO-0eecfcca7b904ea8992ec9ded0fcb5d5">XDAO</a></td><td class="cell-CUXK">XDAO is a no-code DAO launcher for EVM-compatible blockchain networks, focused on investments. It offers a native suit of tools for treasury management &amp; operation and mixed on-/off-chain voting system to save gas fees. It currently BUIDLs a palette of modules to enrich governance and other DAO utilities.</td><td class="cell-wB@p"><span class="selected-value select-value-color-default">DeFi</span><span class="selected-value select-value-color-brown">Launcher</span></td><td class="cell-;yc["><a href="https://www.xdao.app/" class="url-value">https://www.xdao.app/</a></td><td class="cell-ctYf"><a href="https://twitter.com/xdaoapp" class="url-value">https://twitter.com/xdaoapp</a></td></tr><tr id="62ef2269-8f39-44d6-a8d6-9dbdad080df7"><td class="cell-title"><a href="https://www.notion.so/YAO-DAO-62ef22698f3944d6a8d69dbdad080df7">YAO DAO</a></td><td class="cell-CUXK">YAP DAO is a community that provides public relations and communications support to the DeFi world. It is a service marketplace for non-technical people to get work in a technical field.</td><td class="cell-wB@p"><span class="selected-value select-value-color-orange">Media &amp; Comms.</span></td><td class="cell-;yc["><a href="https://www.yapdao.xyz/" class="url-value">https://www.yapdao.xyz/</a></td><td class="cell-ctYf"><a href="https://twitter.com/YAPDAO_" class="url-value">https://twitter.com/YAPDAO_</a></td></tr><tr id="a567a921-0e01-4079-99d2-620ea47de0d2"><td class="cell-title"><a href="https://www.notion.so/Zodiac-a567a9210e01407999d2620ea47de0d2">Zodiac</a></td><td class="cell-CUXK">Gnosis&#x27;s pack of developer-focused DAO tools, based on Gnosis Safe. Its main features include on-chain execution of off-chain voting, a cross-chain DAO agency, a Moloch integrator, and a module for flexible imported governance methods.</td><td class="cell-wB@p"><span class="selected-value select-value-color-brown">Governance</span><span class="selected-value select-value-color-brown">Launcher</span><span class="selected-value select-value-color-red">Treasury</span></td><td class="cell-;yc["><a href="https://github.com/gnosis/zodiac" class="url-value">https://github.com/gnosis/zodiac</a></td><td class="cell-ctYf"><a href="https://twitter.com/GnosisGuild" class="url-value">https://twitter.com/GnosisGuild</a></td></tr></tbody></table></div></article></body></html>
